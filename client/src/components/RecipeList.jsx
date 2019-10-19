@@ -49,7 +49,6 @@ class RecipeList extends Component {
             </div>
           )     
         })}
-        <Link to="/articles/new" className="btn btn-outline-primary">Create Article</Link>  
       </div>
     )
   }

@@ -110,13 +110,17 @@ class Recipe extends Component {
                 <h2>Nutrition: </h2>
                 <div>{badNutrition}</div>
                 <div>{goodNutrition}</div>
+                {
+        localStorage.getItem("jwt") ? 
                 <form>
         <label>
             Type a note about this recipe
             <input type="text" value={this.state.notes} onChange={this.handleNotesChange} />
         </label>
         <input type="submit" value="Save to My Recipes" onClick={() => this.saveToList()}/>
-        </form>
+        </form> : 
+        <div>Log in to save this recipe!</div>
+                }
             </div>
         )
     }
